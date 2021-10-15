@@ -11,7 +11,7 @@ import com.ibm.ejercicio1.Models.CreditModel;
 @Repository
 public interface CreditRepository extends JpaRepository<CreditModel, Integer> {
 
-	public List<CreditModel> findByPassionAndMinSalaryGreaterThanEqualAndMaxSalaryLessThanEqualAndMinAgeGreaterThanEqualAndMaxAgeLessThanEqual(
+	public List<CreditModel> findByPassionAndMinSalaryLessThanEqualAndMaxSalaryGreaterThanEqualAndMinAgeLessThanEqualAndMaxAgeGreaterThanEqual(
 			String passion, Double minsalary, Double maxsalary, Integer minage, Integer maxage);
 
 	public List<CreditModel> findByPassion(String passion);

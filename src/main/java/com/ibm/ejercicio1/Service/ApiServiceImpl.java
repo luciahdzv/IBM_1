@@ -1,4 +1,4 @@
-package com.ibm.ejercicio1.Service;
+ package com.ibm.ejercicio1.Service;
 
 import java.util.List;
 
@@ -18,11 +18,11 @@ public class ApiServiceImpl implements ApiService {
 
 	@Override // implementacion
 	public List<CreditModel> getCreditTypeByParameters(Consulta consulta) {
-		//List<CreditModel> list = creditRepository
-		//		.findByPassionAndMinSalaryGreaterThanEqualAndMaxSalaryLessThanEqualAndMinAgeGreaterThanEqualAndMaxAgeLessThanEqual(
-		//				consulta.getPasion(), consulta.getSalario(), consulta.getSalario(), consulta.getEdad(),
-		//				consulta.getEdad());
-		List<CreditModel> list= creditRepository.findAll();
+		List<CreditModel> list = creditRepository
+				.findByPassionAndMinSalaryLessThanEqualAndMaxSalaryGreaterThanEqualAndMinAgeLessThanEqualAndMaxAgeGreaterThanEqual(
+						consulta.getPasion(), consulta.getSalario(), consulta.getSalario(), consulta.getEdad(),
+						consulta.getEdad());
+		//List<CreditModel> list= creditRepository.findAll();
 		return list;
 
 	}

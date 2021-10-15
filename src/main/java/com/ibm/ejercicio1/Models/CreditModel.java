@@ -8,28 +8,37 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity(name = "Categories")
 public class CreditModel {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@JsonIgnore
 	@Column(name = "categoryID")
 	private Integer categoryId;
 	
+	@JsonIgnore
 	@Column(name = "passion")
 	private String passion;
 	
+	@JsonIgnore
 	@Column(name = "minSalary")
 	private Double minSalary;
 	
+	@JsonIgnore
 	@Column(name = "maxSalary")
 	private Double maxSalary;
 	
+	@JsonIgnore
 	@Column(name = "minAge")
 	private Integer minAge;
 	
+	@JsonIgnore
 	@Column(name = "maxAge")
 	private Integer maxAge;
+	
 	
 	@Column(name = "creditType")
 	private String creditType;
