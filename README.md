@@ -13,3 +13,4 @@
 #     "edad”:NUMERIC,
 #     "salario": NUMERIC
 # }
+![Captura de Pantalla 2021-10-15 a la(s) 15 23 26](https://user-images.githubusercontent.com/80437583/137551092-2de56536-4d5a-41f1-9d34-b6604654a891.png)
